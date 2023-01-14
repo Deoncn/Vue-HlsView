@@ -43,7 +43,7 @@ jobs:
         with:
           # Upload entire repository
           # 上传整个仓库
-          path: './docs'
+          path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
