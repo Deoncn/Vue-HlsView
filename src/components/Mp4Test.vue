@@ -1,20 +1,20 @@
 <template>
   <div align="center">
     <p><input style="width:800px" type="text" v-model="NewSrc"></p>
+
+    
     <button @click="GetIt">获取</button>
     <button @click="ChangeVideo">应用</button>
+
+    <br>
+    <br>
+    <br>
+    <br>
     <p>
+
+      <br>
       <vue3VideoPlay width="800px" v-bind="VideoObject"/>
     </p>
-
-    <p> JwPlayer <a href="https://www.jwplayer.com/" target="_blank">JwPlayer</a> | <a href="https://github.com/jwplayer/jwplayer" target="_blank"> Github </a></p>
-    <p> DPlayer <a href="https://dplayer.diygod.dev/" target="_blank"> DPlayer </a> |👉 <a href="https://github.com/DIYgod/DPlayer" target="_blank"> Github </a></p>
-    <p> hello-muiplayer <a href="https://muiplayer.js.org/" target="_blank"> muiplayer </a> | <a href="https://github.com/muiplayer/hello-muiplayer" target="_blank"> muiplayer </a></p>
-    <p> v-videos.js <a href="https://videojs.com/" target="_blank"> videojs </a> | <a href="https://github.com/videojs/video.js" target="_blank"> videojs </a></p>
-
-    <p> v-videos.js <a href="https://codelife.cc/vue3-video-play/" target="_blank"> vue3-video-play </a> | <a href="https://github.com/xdlumia/vue3-video-play" target="_blank"> videojs </a></p>
-
-
   </div>
 </template>
 
