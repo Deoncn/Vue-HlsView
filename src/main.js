@@ -1,12 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import router from './router'
+const app = createApp(App)
+
 
 import './assets/main.css'
-
-const app = createApp(App)
-app.use(router)
-
 
 // vue3-video-play
 import vue3videoPlay from 'vue3-video-play' // 引入组件
