@@ -80,6 +80,17 @@ export default {
       console.log(item.src)
 
 
+    },
+
+    copyTextToClipboard(text) {
+      var textArea = document.createElement("textarea");
+      textArea.value = text;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textArea);
+
+      alert("复制成功!")
     }
 
 
@@ -171,7 +182,7 @@ export default {
 
                 <!-- 播放地址 -->
                 <div role="gridcell">
-                  <a id="url" focus-type="url" href="#" @click="copythevideosrc(item)" tabindex="0">
+                  <a id="url" focus-type="url" href="javascript:void" @click="copyTextToClipboard(item.src)" tabindex="0">
                     {{ item.src }}
                   </a>
                 </div>
