@@ -23,6 +23,13 @@ permissions:
   pages: write
   id-token: write
 
+# Allow one concurrent deployment
+# 允许一个并发部署
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 # 一个工作流程运行由一个或多个可以顺序或并行运行的作业组成
 jobs:
