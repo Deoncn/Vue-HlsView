@@ -1,7 +1,6 @@
 <script>
 import { v4 as uuidv4 } from 'uuid';
-import Mp4Page from './components/Mp4Test.vue'
-
+import Mp4Page from './components/DPlayerjsTest.vue'
 
 export default {
   components: {
@@ -14,7 +13,6 @@ export default {
   data() {
     return {
       istext: false,
-      inputid: null,
       inputid: 0,
       inputdescription: "",
       inputname: "",
@@ -93,7 +91,6 @@ export default {
       alert("复制成功!")
     }
 
-
   },
   watch: {
     // context(value) { localStorage.setItem('context', JSON.stringify(value)) },
@@ -119,27 +116,13 @@ export default {
 
     <header>
       <h1>
-        <img width="30" src="https://avatars.githubusercontent.com/u/51418619?v=4" alt="">
-        👺🥥
-        简易视频播放器
-
+        <img width="30" src="https://avatars.githubusercontent.com/u/51418619?v=4" alt=""> 简易视频播放器
       </h1>
+      <Mp4Page></Mp4Page>
 
-
-      <p> JwPlayer <a href="https://www.jwplayer.com/" target="_blank">JwPlayer</a> | <a
-          href="https://github.com/jwplayer/jwplayer" target="_blank"> Github </a></p>
-      <p> DPlayer <a href="https://dplayer.diygod.dev/" target="_blank"> DPlayer </a> |👉 <a
+      <p> DPlayer <a href="https://dplayer.diygod.dev/guide.html" target="_blank"> DPlayer </a> |👉 <a
           href="https://github.com/DIYgod/DPlayer" target="_blank"> Github </a></p>
-      <p> hello-muiplayer <a href="https://muiplayer.js.org/" target="_blank"> muiplayer </a> | <a
-          href="https://github.com/muiplayer/hello-muiplayer" target="_blank"> muiplayer </a></p>
-      <p> v-videos.js <a href="https://videojs.com/" target="_blank"> videojs </a> | <a
-          href="https://github.com/videojs/video.js" target="_blank"> videojs </a></p>
-
-      <p> v-videos.js <a href="https://codelife.cc/vue3-video-play/" target="_blank"> vue3-video-play </a> | <a
-          href="https://github.com/xdlumia/vue3-video-play" target="_blank"> videojs </a></p>
     </header>
-
-
 
     <main>
       <div style="border: 1cm solid rebeccapurple;">
@@ -152,14 +135,12 @@ export default {
         <button @click="addVideos(inputid, inputdescription, inputname, inputsrc)"> 添加 </button>
         <button @click="datatoVideoList(contexts)">保存</button>
         </p>
-
         <div id="no-downloads" v-if="!contt">
           <div>
             <div class="illustration"> </div>
             <span>您添加的视频会显示在此处</span>
           </div>
         </div>
-
         <div id="downloadsList">
           <div v-if="contt" v-for="(item, index) in contexts" :key="index">
 
@@ -182,7 +163,7 @@ export default {
 
                 <!-- 播放地址 -->
                 <div role="gridcell">
-                  <a id="url" focus-type="url" href="javascript:void" @click="copyTextToClipboard(item.src)" tabindex="0">
+                  <a id="url" focus-type="url" href="javascript:" @click="copyTextToClipboard(item.src)" tabindex="0">
                     {{ item.src }}
                   </a>
                 </div>
@@ -218,11 +199,7 @@ export default {
           </div>
         </div>
 
-
-
       </div>
-
-
 
       <p>
         <textarea v-if="istext" cols="85" rows="30" v-model="context"></textarea>
@@ -236,10 +213,6 @@ export default {
       <br>
       <br>
 
-      <Mp4Page></Mp4Page>
-
     </main>
-
-
   </div>
 </template>
