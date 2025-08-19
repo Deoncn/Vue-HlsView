@@ -10,7 +10,7 @@
 
 <script>
 import dplayer from '../ts/+esm'
-import {isPlayableVideoUrl} from '@/ts/isPlayableVideoUrl'
+import {isPlayableVideoUrl} from '../ts/isPlayableVideoUrl'
 
 
 export default {
