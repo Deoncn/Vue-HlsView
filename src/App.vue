@@ -1,4 +1,7 @@
 <script>
+import './assets/main.css'
+import './assets/DPlayer.min.css'
+
 import Mp4Page from './components/DPlayerjsTest.vue'
 
 export default {
