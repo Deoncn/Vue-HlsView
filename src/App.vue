@@ -14,7 +14,7 @@ export default {
   name: 'App',
   data() {
     return {
-      istext: false,
+
       inputid: 0,
       inputdescription: "",
       inputname: "",
