@@ -5,7 +5,7 @@
 
 #app {
   font-family: 'Noto Sans SC', sans-serif;
-  font-size: 20;
+  font-size: 20px;
 
   max-width: 1280px;
   margin: 0 auto;
@@ -70,20 +70,12 @@
   display: none !important;
 }
 
-#no-downloads .illustration {
-  background: url(./no_downloads.svg) no-repeat center center;
-  background-size: contain;
-  height: 144px;
-  margin-bottom: 32px;
-}
-
-
 #downloadsList {
   min-width: calc(680px + 2 * 24px);
 }
 
 #downloadsList,
-downloads-item {
+#downloads-item {
   --downloads-card-margin: 24px;
   --downloads-card-width: 680px;
 }
@@ -141,14 +133,10 @@ downloads-item {
 
 .more-options {
   display: flex;
-  flex-direction: column-r;
+  flex-direction: column;
 }
 
-.icon-clear {
-  --cr-icon-image: url(./icon_clear.svg);
-}
-
-cr-icon-button {
+#cr-icon-button {
   --cr-icon-button-icon-size: 16px;
   --cr-icon-button-margin-end: 8px;
   margin-top: 8px;
@@ -169,18 +157,6 @@ cr-icon-button {
   justify-content: center;
   padding-inline-start: 0;
   position: relative;
-  width: 100%;
-}
-
-#maskedImage {
-  -webkit-mask-image: var(--cr-icon-image);
-  -webkit-mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: 16px;
-  -webkit-transform: var(--cr-icon-image-transform, none);
-  background-color: rgb(12, 105, 199);
-  height: 100%;
-  transition: background-color 150ms ease-in-out;
   width: 100%;
 }
 

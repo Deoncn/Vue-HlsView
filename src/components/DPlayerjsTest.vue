@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import dplayer from '../ts/+esm'
+import dplayer from '../assets/+esm'
 import {isPlayableVideoUrl} from '../ts/isPlayableVideoUrl'
 
 
